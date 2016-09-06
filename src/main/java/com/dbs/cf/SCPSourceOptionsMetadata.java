@@ -23,8 +23,8 @@ public class SCPSourceOptionsMetadata {
     /** remote file to be copied over */
     private String fileName;
 
-    /** interval to execute the copy */
-    private int fixedDelay = 1;
+    /** cron expression */
+    private String cronExpression = "";
 
 
     private String privateKeyFile;
@@ -77,11 +77,11 @@ public class SCPSourceOptionsMetadata {
         this.fileName = fileName;
     }
 
-    public int getFixedDelay() {
-        return fixedDelay;
+    public String getCronExpression() {
+        return cronExpression;
     }
 
-    public void setFixedDelay(int fixedDelay) {
-        this.fixedDelay = fixedDelay;
+    public void setCronExpression(String cronExpression) {
+        this.cronExpression = cronExpression;
     }
 }
